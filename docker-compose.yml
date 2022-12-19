@@ -1,5 +1,6 @@
 version: '2.4'
 
+
 services:
   parsedmarc-init:
     image: patschi/parsedmarc:init
@@ -18,7 +19,7 @@ services:
       start_period: 10s
 
   parsedmarc:
-    image: patschi/parsedmarc:latest
+    image: rabihaggle/parsedmarc:latest
     volumes:
       - ./data/conf/parsedmarc/:/etc/parsedmarc/
       - ./data/data/geoipupdate/:/usr/share/GeoIP:z,ro
@@ -94,7 +95,7 @@ services:
     image: nginx:alpine
     restart: always
     ports:
-      - "9999:443"
+      - "443:443"
     volumes:
       - ./data/conf/nginx/site.conf:/etc/nginx/conf.d/default.conf:ro
       - ./data/conf/nginx/ssl/:/etc/nginx/ssl/:ro
