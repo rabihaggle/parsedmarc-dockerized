@@ -29,8 +29,9 @@ docker-compose up -d
 ```
 5. IMPORTANT -->> Made changes to view the logs, especially for the gmail api configuration.
 for logs
--->  docker logs parsedmarc-dockerized_parsedmarc_1
-
+```
+docker logs parsedmarc-dockerized_parsedmarc_1
+```
 
 ### What's happening then?
 
